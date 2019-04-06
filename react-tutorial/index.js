@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Greeting from './src/Components/Greeting';
+
+const App = () => (
+  <div>
+    <Greeting age={30} />
+  </div>
+);
 
 const htmlRoot = document.getElementById('root');
 
-const Greeting = (props) => {
-  return (
-    <div>
-      {`Hello ${props.name}, you are ${props.age} years old.`}
-    </div>
-  );
-};
 
-ReactDOM.render(<Greeting name="John" age={30} />, htmlRoot);
+
+ReactDOM.render(<App />, htmlRoot);
